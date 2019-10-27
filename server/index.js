@@ -67,10 +67,11 @@ app.prepare().then(() => {
           ctx.session.accessToken
         )
         console.log('sCreate', sCreate)
-      } else if (script.src.includes('ngrok.io') || !script.src.includes('?shop=')) {
-        await deleteScriptTag(script.id, ctx.session.shop, ctx.session.accessToken)
-        await createScriptTag(ctx.session.shop, ctx.session.accessToken)
       }
+      // else if (script.src.includes('ngrok.io') || !script.src.includes('?shop=')) {
+      //   await deleteScriptTag(script.id, ctx.session.shop, ctx.session.accessToken)
+      //   await createScriptTag(ctx.session.shop, ctx.session.accessToken)
+      // }
     } catch (err) {
       console.log('err', err)
     }
